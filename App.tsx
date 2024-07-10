@@ -4,6 +4,7 @@ import ThemeMode from './src/components/ThemeMode';
 import { useState, createContext } from 'react';
 
 export const ThemeContext = createContext('')
+
 const App = () => {
   const [theme, setTheme] = useState(false)
 
