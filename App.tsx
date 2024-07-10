@@ -8,6 +8,8 @@ const App = () => {
   const [theme, setTheme] = useState(false)
 
   return (
+    //We use the provider to provide theme and setTheme to any child component inside the wrapper.
+    // if the theme is true, we switch to darkMode, if not.. it goes to lightMode
     <ThemeContext.Provider value={[theme, setTheme]}>
     <View style={theme ? styles.darkMode : styles2.lightMode }>
       <ThemeMode />
@@ -15,6 +17,8 @@ const App = () => {
     </ThemeContext.Provider>
   );
 }
+
+
 
 const styles = StyleSheet.create({
   darkMode: {
